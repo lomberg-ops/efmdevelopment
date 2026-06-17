@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# EFM: raw client assets archive (kept locally, not committed/deployed)
+/_source/
+/public/media/originals/
