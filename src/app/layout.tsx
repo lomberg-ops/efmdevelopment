@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -27,15 +26,6 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
-  keywords: [
-    "forest biosensors",
-    "biomass value chains",
-    "carbon capture",
-    "biodiversity monitoring",
-    "LiDAR forest assessment",
-    "sustainable forestry",
-    "EFM Development",
-  ],
   authors: [{ name: site.legalName }],
   openGraph: {
     type: "website",
@@ -73,7 +63,6 @@ export default function RootLayout({
           {children}
         </main>
         <SiteFooter />
-        <Analytics />
       </body>
     </html>
   );

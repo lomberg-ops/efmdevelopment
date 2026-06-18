@@ -94,7 +94,7 @@ export default async function OpengraphImage() {
               marginTop: 18,
             }}
           >
-            New biomass-based value chains · Digital forest biosensors
+            New biomass based value chains
           </div>
         </div>
       </div>

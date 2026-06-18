@@ -55,12 +55,6 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <Link
-            href="/contact"
-            className="inline-flex items-center rounded-sm bg-forest-700 px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-forest-800"
-          >
-            Get in touch
-          </Link>
         </nav>
 
         {/* Mobile toggle */}
@@ -121,15 +115,6 @@ export function SiteHeader() {
                   </li>
                 );
               })}
-              <li className="pt-3">
-                <Link
-                  href="/contact"
-                  onClick={() => setOpen(false)}
-                  className="inline-flex w-full items-center justify-center rounded-sm bg-forest-700 px-5 py-3 text-base font-semibold text-cream"
-                >
-                  Get in touch
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>

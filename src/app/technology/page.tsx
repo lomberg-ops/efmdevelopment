@@ -4,25 +4,18 @@ import { PageHero } from "@/components/PageHero";
 import { ForestVideo } from "@/components/ForestVideo";
 import { EcosystemAssessment } from "@/components/EcosystemAssessment";
 import { Reveal } from "@/components/Reveal";
+import { Container, Section, SectionHeading } from "@/components/ui";
 import {
-  Container,
-  Section,
-  SectionHeading,
-  Button,
-  ArrowRight,
-  Eyebrow,
-} from "@/components/ui";
-import {
+  heroTechnology,
   pillars,
   visibleValue,
   secureGrowth,
-  measurementDomains,
+  measurementLabels,
 } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Forest biosensors",
-  description:
-    "Digital forest biosensors that quantify carbon capture, nature diversity and forest-management performance with transparent, LiDAR-derived indicators.",
+  description: heroTechnology.subline,
 };
 
 export default function TechnologyPage() {
@@ -32,12 +25,11 @@ export default function TechnologyPage() {
         priority
         image="/images/forest-path-timber.jpg"
         imageAlt="Forest track lined with stacked timber"
-        eyebrow="Forest biosensors"
-        title="Add value with biosensors"
-        intro="Quantify your carbon capture, nature diversity and other actions with digital biosensors — and make them part of the value of your biomass raw material."
+        title={heroTechnology.title}
+        intro={heroTechnology.subline}
       />
 
-      {/* Two pillars */}
+      {/* Two pillars — deck p.2, verbatim */}
       <Section tone="white">
         <Container>
           <div className="grid gap-8 md:grid-cols-2">
@@ -50,9 +42,11 @@ export default function TechnologyPage() {
                   <p className="mt-4 text-lg leading-relaxed text-forest-800/80">
                     {p.body}
                   </p>
-                  <p className="mt-4 border-t border-line pt-4 font-medium text-forest-700">
-                    {p.highlight}
-                  </p>
+                  {p.highlight && (
+                    <p className="mt-4 border-t border-line pt-4 font-medium text-forest-700">
+                      {p.highlight}
+                    </p>
+                  )}
                 </article>
               </Reveal>
             ))}
@@ -60,22 +54,76 @@ export default function TechnologyPage() {
         </Container>
       </Section>
 
-      {/* Measurement technology */}
+      {/* Add visible value to your asset — deck p.3, verbatim */}
       <Section tone="cream">
         <Container>
           <Reveal>
-            <SectionHeading
-              eyebrow="Measurement technology"
-              title="3D measurement of forest structure"
-              intro="LiDAR-based 3D measurement of forest structure feeds four families of indicators — carbon, biodiversity, operations and restoration."
-            />
+            <SectionHeading title="Add visible value to your asset" />
           </Reveal>
-
           <Reveal delay={80}>
-            <figure className="mt-12 overflow-hidden rounded-md border border-line bg-white shadow-card">
+            <ol className="mt-10 grid gap-5 sm:grid-cols-2">
+              {visibleValue.map((item, i) => (
+                <li key={item.slice(0, 20)} className="flex gap-4">
+                  <span className="font-display mt-0.5 text-xl font-bold leading-none text-forest-600">
+                    {i + 1}.
+                  </span>
+                  <p className="text-lg leading-relaxed text-forest-800/85">
+                    {item}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
+        </Container>
+      </Section>
+
+      {/* Secure growth and well being of your asset — deck p.4, verbatim */}
+      <Section tone="white">
+        <Container>
+          <Reveal>
+            <SectionHeading title="Secure growth and well being of your asset" />
+          </Reveal>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {secureGrowth.map((group, i) => (
+              <Reveal key={group.title} delay={i * 70}>
+                <article className="flex h-full flex-col rounded-md border border-line bg-cream p-7 shadow-card">
+                  <h3 className="font-display text-lg font-semibold leading-snug text-forest-800">
+                    {group.title}
+                  </h3>
+                  {group.points.length > 0 && (
+                    <ul className="mt-4 space-y-3">
+                      {group.points.map((pt) => (
+                        <li
+                          key={pt.slice(0, 20)}
+                          className="flex gap-3 text-base leading-relaxed text-forest-800/80"
+                        >
+                          <span
+                            aria-hidden="true"
+                            className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-forest-500"
+                          />
+                          <span>{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Measurement technology — deck p.5 (source figure) */}
+      <Section tone="cream">
+        <Container>
+          <Reveal>
+            <SectionHeading title="Measurement technology" />
+          </Reveal>
+          <Reveal delay={80}>
+            <figure className="mt-10 overflow-hidden rounded-md border border-line bg-white shadow-card">
               <Image
                 src="/images/tech/measurement-technology.jpg"
-                alt="A coloured 3D LiDAR point-cloud measurement of forest structure, branching into carbon, biodiversity, operations and restoration categories."
+                alt="3D measurement of forest structure, branching into Carbon, Biodiversity, Operations and Restoration."
                 width={1259}
                 height={706}
                 className="h-auto w-full"
@@ -83,147 +131,46 @@ export default function TechnologyPage() {
               />
             </figure>
           </Reveal>
-
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {measurementDomains.map((d, i) => (
-              <Reveal key={d.title} delay={i * 60}>
-                <article className="flex h-full flex-col overflow-hidden rounded-md border border-line bg-white shadow-card">
-                  <div className="relative" style={{ aspectRatio: "4 / 3" }}>
-                    <Image
-                      src={d.image}
-                      alt={d.alt}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col p-5">
-                    <h3 className="font-display text-lg font-semibold text-forest-800">
-                      {d.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-forest-800/75">
-                      {d.body}
-                    </p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={120}>
+            <ul className="mt-6 flex flex-wrap justify-center gap-3">
+              {measurementLabels.map((label) => (
+                <li
+                  key={label}
+                  className="rounded-full border border-line bg-white px-4 py-1.5 font-display text-sm font-semibold uppercase tracking-wide text-forest-700"
+                >
+                  {label}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </Container>
       </Section>
 
-      {/* Ecosystem assessment */}
+      {/* LiDAR-derived Ecosystem Assessment — deck p.6 (source figure + scores) */}
       <Section tone="white">
         <Container>
           <Reveal>
-            <SectionHeading
-              eyebrow="Ecosystem assessment"
-              title="From point cloud to transparent indicators"
-              intro="Structural and ecological indicators are derived from LiDAR data and expressed as clear, comparable scores."
-            />
+            <SectionHeading title="LiDAR-derived Ecosystem Assessment" />
           </Reveal>
           <Reveal delay={80}>
-            <div className="mt-12">
+            <div className="mt-10">
               <EcosystemAssessment />
             </div>
           </Reveal>
         </Container>
       </Section>
 
-      {/* Add visible value */}
-      <Section tone="cream">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:gap-16">
-            <Reveal>
-              <SectionHeading
-                eyebrow="Add visible value to your asset"
-                title="Four measured contributions"
-              />
-            </Reveal>
-            <Reveal delay={80}>
-              <ul className="space-y-5">
-                {visibleValue.map((item, i) => (
-                  <li key={item.slice(0, 20)} className="flex gap-4">
-                    <span className="font-display mt-0.5 text-xl font-bold leading-none text-forest-600">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <p className="text-lg leading-relaxed text-forest-800/85">
-                      {item}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Secure growth */}
-      <Section tone="white">
+      {/* Forest footage (provided asset, used as a plain visual) */}
+      <Section tone="cream" className="py-16 sm:py-20">
         <Container>
           <Reveal>
-            <SectionHeading
-              eyebrow="Secure growth & wellbeing"
-              title="Resilience, monitoring and sustainable operations"
-            />
-          </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {secureGrowth.map((group, i) => (
-              <Reveal key={group.title} delay={i * 70}>
-                <article className="flex h-full flex-col rounded-md border border-line bg-cream p-7 shadow-card">
-                  <h3 className="font-display text-xl font-semibold text-forest-800">
-                    {group.title}
-                  </h3>
-                  <ul className="mt-4 space-y-3">
-                    {group.points.map((pt) => (
-                      <li
-                        key={pt.slice(0, 20)}
-                        className="flex gap-3 text-base leading-relaxed text-forest-800/80"
-                      >
-                        <span
-                          aria-hidden="true"
-                          className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-forest-500"
-                        />
-                        <span>{pt}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Forest video + CTA */}
-      <Section tone="cream">
-        <Container>
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            <Reveal>
+            <div className="mx-auto max-w-4xl">
               <ForestVideo
                 slug="forest-loop-2"
                 label="Ambient footage of a managed forest stand"
               />
-            </Reveal>
-            <Reveal delay={80}>
-              <div className="max-w-xl">
-                <Eyebrow>Get started</Eyebrow>
-                <h2 className="font-display mt-3 text-3xl font-semibold leading-[1.12] tracking-tight text-forest-900 sm:text-4xl">
-                  Put a measured value on your stewardship
-                </h2>
-                <p className="mt-5 text-lg leading-relaxed text-forest-800/80">
-                  Talk to EFM Development about applying forest biosensors to your
-                  asset — from carbon and biodiversity to operations and
-                  restoration.
-                </p>
-                <div className="mt-8">
-                  <Button href="/contact">
-                    Get in touch <ArrowRight />
-                  </Button>
-                </div>
-              </div>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
         </Container>
       </Section>
     </>

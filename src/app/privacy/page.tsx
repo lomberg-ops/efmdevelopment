@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 /**
  * Privacy Notice — reproduced from the client's source document, which is
  * INCOMPLETE (only the intro, a register/subcontractor paragraph and section 7
- * were supplied). The missing sections are flagged below and must be completed
- * before the live contact form is used in production (GDPR / Swiss FADP).
+ * were supplied). The missing sections are flagged below for the client to
+ * complete.
  */
 export default function PrivacyPage() {
   return (
@@ -36,11 +36,9 @@ export default function PrivacyPage() {
           <p className="font-semibold">Draft — sections to be completed</p>
           <p className="mt-1 text-forest-800/80">
             {"{{TODO}}"} Sections 1–6 of this Privacy Notice were not included in
-            the source material and still need to be supplied (e.g. data
-            controller, purposes and legal bases, categories of data, rights of
-            data subjects, cookies/analytics, contact for privacy requests).
-            This notice must be completed before the contact form is used in
-            production.
+            the source material and still need to be supplied by the client
+            (e.g. data controller, purposes and legal bases, categories of data,
+            rights of data subjects, contact for privacy requests).
           </p>
         </div>
 

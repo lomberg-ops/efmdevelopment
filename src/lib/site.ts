@@ -10,8 +10,9 @@ export const site = {
   // {{TODO: confirm production domain before launch}}
   url: "https://www.efmdevelopment.com",
   tagline: "Added value from forest",
+  // Meta description = source text (web-copy PDF, p.2), not invented marketing.
   description:
-    "EFM Development builds new biomass-based value chains and digital forest biosensors that make carbon capture, biodiversity and forest-management performance visible, measurable and transparent.",
+    "EFM Development develops new value chains based on renewable biomass from forests.",
   contact: {
     email: "info@efmdevelopment.com",
     addressLines: ["Burgstrasse 8 D", "3600 Thun", "Switzerland"],

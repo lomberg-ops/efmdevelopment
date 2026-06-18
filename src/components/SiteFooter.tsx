@@ -14,9 +14,7 @@ export function SiteFooter() {
           <div className="max-w-xs">
             <Logo onDark />
             <p className="mt-5 text-sm leading-relaxed text-forest-100/70">
-              New biomass-based value chains and digital forest biosensors —
-              making the added value of your forest asset visible and
-              transparent.
+              New biomass based value chains
             </p>
           </div>
 
