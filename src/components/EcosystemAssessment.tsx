@@ -16,8 +16,8 @@ export function EcosystemAssessment() {
         {/* Point-cloud visual with illustrative badge */}
         <figure className="relative min-h-[260px]">
           <Image
-            src="/images/tech/lidar-ecosystem-assessment.jpg"
-            alt="LiDAR-derived ecosystem assessment: an aerial point-cloud scan of forest canopy used to derive structural and ecological indicator scores."
+            src="/images/tech/lidar-pointcloud.jpg"
+            alt="Aerial LiDAR point-cloud scan of forest canopy used to derive structural and ecological indicator scores."
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"

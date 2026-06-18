@@ -12,6 +12,14 @@ import {
   heroTechnology,
 } from "@/lib/content";
 
+// Each service paired with a provided photo (image-led cards, UPM-style).
+const serviceImages = [
+  { src: "/images/about-fieldwork.jpg", alt: "A forestry specialist inspecting timber in the forest" },
+  { src: "/images/timber-rounds-2.jpg", alt: "Stacked rounds of harvested timber" },
+  { src: "/images/forest-path-timber.jpg", alt: "Forest track lined with stacked timber" },
+  { src: "/images/forest-foliage.jpg", alt: "Sunlit green forest foliage" },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -57,20 +65,31 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      {/* Services — web-copy PDF p.3, verbatim */}
+      {/* Services — web-copy PDF p.3, verbatim. Image-led cards (UPM-style). */}
       <Section tone="cream">
         <Container>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((line, i) => (
               <Reveal key={line.slice(0, 24)} delay={i * 70}>
-                <div className="flex h-full gap-5 rounded-md border border-line bg-white p-7 shadow-card">
-                  <span className="font-display text-3xl font-bold leading-none text-forest-300">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <p className="text-lg leading-relaxed text-forest-800/85">
-                    {line}
-                  </p>
-                </div>
+                <article className="group flex h-full flex-col overflow-hidden rounded-md border border-line bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 3" }}>
+                    <Image
+                      src={serviceImages[i].src}
+                      alt={serviceImages[i].alt}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                    <span className="absolute left-4 top-3 font-display text-2xl font-bold text-cream [text-shadow:0_1px_4px_rgba(12,29,19,0.6)]">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="text-base leading-relaxed text-forest-800/85">
+                      {line}
+                    </p>
+                  </div>
+                </article>
               </Reveal>
             ))}
           </div>

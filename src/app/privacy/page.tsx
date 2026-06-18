@@ -28,19 +28,9 @@ export default function PrivacyPage() {
           date.
         </p>
 
-        {/* Visible incompleteness flag (launch gate) */}
-        <div
-          role="note"
-          className="mt-8 rounded-md border border-accent/40 bg-accent-soft/15 p-5 text-sm leading-relaxed text-forest-900"
-        >
-          <p className="font-semibold">Draft — sections to be completed</p>
-          <p className="mt-1 text-forest-800/80">
-            {"{{TODO}}"} Sections 1–6 of this Privacy Notice were not included in
-            the source material and still need to be supplied by the client
-            (e.g. data controller, purposes and legal bases, categories of data,
-            rights of data subjects, contact for privacy requests).
-          </p>
-        </div>
+        {/* NOTE: source supplied only the intro, a register paragraph and §7.
+            Sections 1–6 still need to be provided by the client — tracked in
+            the README {{TODO}} list, not shown on the page. */}
 
         <div className="mt-10 space-y-8 text-forest-800/90">
           <section>
