@@ -5,10 +5,10 @@ import { ForestVideo } from "@/components/ForestVideo";
 import { EcosystemAssessment } from "@/components/EcosystemAssessment";
 import { Reveal } from "@/components/Reveal";
 import { Container, Section, SectionHeading } from "@/components/ui";
+import { VisibleValue } from "@/components/VisibleValue";
 import {
   heroTechnology,
   pillars,
-  visibleValue,
   secureGrowth,
   measurementLabels,
 } from "@/lib/content";
@@ -55,27 +55,7 @@ export default function TechnologyPage() {
       </Section>
 
       {/* Add visible value to your asset — deck p.3, verbatim */}
-      <Section tone="cream">
-        <Container>
-          <Reveal>
-            <SectionHeading title="Add visible value to your asset" />
-          </Reveal>
-          <Reveal delay={80}>
-            <ol className="mt-10 grid gap-5 sm:grid-cols-2">
-              {visibleValue.map((item, i) => (
-                <li key={item.slice(0, 20)} className="flex gap-4">
-                  <span className="font-display mt-0.5 text-xl font-bold leading-none text-forest-600">
-                    {i + 1}.
-                  </span>
-                  <p className="text-lg leading-relaxed text-forest-800/85">
-                    {item}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </Reveal>
-        </Container>
-      </Section>
+      <VisibleValue />
 
       {/* Secure growth and well being of your asset — deck p.4, verbatim */}
       <Section tone="white">

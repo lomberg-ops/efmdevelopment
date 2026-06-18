@@ -3,14 +3,9 @@ import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { ForestVideo } from "@/components/ForestVideo";
 import { Reveal } from "@/components/Reveal";
-import { Container, Section, SectionHeading, Eyebrow, ArrowRight } from "@/components/ui";
-import {
-  heroHome,
-  companyParagraphs,
-  services,
-  visibleValue,
-  heroTechnology,
-} from "@/lib/content";
+import { Container, Section, Eyebrow, ArrowRight } from "@/components/ui";
+import { VisibleValue } from "@/components/VisibleValue";
+import { heroHome, companyParagraphs, services, heroTechnology } from "@/lib/content";
 
 // Each service paired with a provided photo (image-led cards, UPM-style).
 const serviceImages = [
@@ -139,27 +134,7 @@ export default function HomePage() {
       </Section>
 
       {/* Add visible value to your asset — deck p.3, verbatim */}
-      <Section tone="cream">
-        <Container>
-          <Reveal>
-            <SectionHeading title="Add visible value to your asset" />
-          </Reveal>
-          <ol className="mt-10 grid gap-6 sm:grid-cols-2">
-            {visibleValue.map((item, i) => (
-              <Reveal key={item.slice(0, 20)} delay={i * 70} as="li">
-                <div className="flex h-full gap-4 rounded-md border border-line bg-white p-6 shadow-card">
-                  <span className="font-display mt-0.5 text-xl font-bold leading-none text-forest-600">
-                    {i + 1}.
-                  </span>
-                  <p className="text-base leading-relaxed text-forest-800/85">
-                    {item}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </ol>
-        </Container>
-      </Section>
+      <VisibleValue />
     </>
   );
 }
