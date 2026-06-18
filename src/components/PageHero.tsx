@@ -47,8 +47,8 @@ export function PageHero({
         className={cn(
           "relative flex flex-col justify-end",
           size === "tall"
-            ? "min-h-[88vh] pb-20 pt-32 sm:pb-24"
-            : "min-h-[58vh] pb-16 pt-28 sm:pb-20"
+            ? "min-h-[76vh] pb-20 pt-32 sm:pb-24"
+            : "min-h-[54vh] pb-16 pt-28 sm:pb-20"
         )}
       >
         <div className="max-w-3xl">

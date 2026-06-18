@@ -68,23 +68,25 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Scroll-reveal: hidden state, revealed by IntersectionObserver.
-   Falls back to fully visible if JS or motion is disabled. */
+/* Reveal-in: content is ALWAYS visible (opacity:1 baseline) so it can never be
+   stuck blank if JS is slow/absent. When motion is allowed it animates in via a
+   pure-CSS keyframe that ends visible. No JS dependency. */
 .reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  will-change: opacity, transform;
-}
-.reveal[data-shown="true"] {
   opacity: 1;
-  transform: none;
 }
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: no-preference) {
   .reveal {
+    animation: reveal-in 0.7s ease both;
+  }
+}
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
     opacity: 1;
     transform: none;
-    transition: none;
   }
 }
 
