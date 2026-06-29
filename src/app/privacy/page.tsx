@@ -43,13 +43,13 @@ export default function PrivacyPage() {
               that manage and store personal data on a protected server. With
               our subcontractors we have taken care of privacy by drafting
               processing agreements for the processing of personal data. In some
-              cases, personal data may be disclosed outside the EU/EEA. The
-              disclosure of the information depends on the service purchased by
-              the customer, which in the contract refers more closely to the
-              type of transfer and to whom it is disclosed. We have taken
-              appropriate measures to protect the transfer. We use standard
-              contract clauses approved by the EU or transfer procedures
-              approved by the EU Commission.
+              cases, personal data may be disclosed outside the EU/EEA, such as
+              the United States and Russia. The disclosure of the information
+              depends on the service purchased by the customer, which in the
+              contract refers more closely to the type of transfer and to which
+              it is disclosed. We have taken appropriate measures to protect the
+              transfer. We use standard contract clauses approved by the EU or
+              transfer procedures approved by the EU Commission.
             </p>
           </section>
 
