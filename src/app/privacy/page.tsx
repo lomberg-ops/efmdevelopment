@@ -55,7 +55,7 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="font-display text-lg font-semibold text-forest-900">
-              7. How we protect the data and how long do we keep it?
+              How we protect the data and how long do we keep it?
             </h2>
             <p className="mt-3 leading-relaxed">
               Only employees who have the right to process personal data for
