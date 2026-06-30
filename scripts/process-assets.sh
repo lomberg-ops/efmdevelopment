@@ -54,12 +54,20 @@ video DSC_8009 forest-loop-1
 video DSC_8007 forest-loop-2
 video DSC_8008 forest-loop-3
 
-echo "==> Brand emblem + app icons (center-crop the circular mark from the tile)"
+echo "==> Brand emblem (forest tile — used as the About-page brand visual)"
 TILE="_source/text/39340195-2B4B-4768-BAFB-E60B20740B5C.png"
 cp "$TILE" public/brand/efm-emblem.png
-# Center square crop (keeps the circular emblem), scaled for icons.
-ffmpeg -y -loglevel error -i "$TILE" -vf "crop=1100:1100:77:77,scale=512:512" src/app/icon.png
-ffmpeg -y -loglevel error -i "$TILE" -vf "crop=1100:1100:77:77,scale=180:180" src/app/apple-icon.png
+
+echo "==> Favicon / app icons (official blue EFM wordmark, fit on a white square)"
+# Use the real client logo so the browser-tab icon is the blue 'Efm' mark,
+# not the photographic emblem (which turns to mush at favicon size).
+LOGO="_source/text/Logo_EFM_Sept_2019_new.jpg"
+ffmpeg -y -loglevel error -i "$LOGO" \
+  -vf "scale=512:512:force_original_aspect_ratio=decrease,pad=512:512:(ow-iw)/2:(oh-ih)/2:color=white" \
+  src/app/icon.png
+ffmpeg -y -loglevel error -i "$LOGO" \
+  -vf "scale=180:180:force_original_aspect_ratio=decrease,pad=180:180:(ow-iw)/2:(oh-ih)/2:color=white" \
+  src/app/apple-icon.png
 
 echo "==> Done."
 ls -la "$MEDIA"
