@@ -58,6 +58,9 @@ export default function AboutPage() {
               <div className="max-w-xl">
                 <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-forest-900 sm:text-4xl">
                   {site.legal.ceo}
+                  <span className="text-2xl font-medium text-forest-700">
+                    , {site.legal.ceoPostNominal}
+                  </span>
                 </h2>
                 <p className="mt-2 font-medium text-forest-700">
                   Managing Director, {site.legalName}

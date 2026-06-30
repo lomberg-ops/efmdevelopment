@@ -18,7 +18,7 @@ export const heroHome = {
 
 /** Web-copy PDF, p.2 — company description (used on About). */
 export const companyParagraphs: string[] = [
-  "EFM Development develops new value chains based on renewable biomass from forests. We are experts in business development, market intelligence and supply chains. With focus on technology; chemistry of wood based materials, process technology and product technology.",
+  "EFM Development creates new value chains based on renewable biomass from forests. We are experts in business development, market intelligence and supply chains. With focus on technology; chemistry of wood based materials, process technology and product technology.",
   "We have tools that make your forest management practices, diversity and protection actions and carbon capture efficiency visible and transparent. With our digital KPIs and AI driven tools you can illustrate the added value of your forest asset any time anywhere.",
 ];
 

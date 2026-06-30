@@ -47,7 +47,9 @@ export default function ImpressumPage() {
               <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-forest-600">
                 Vertretungsberechtigter Geschäftsführer
               </h2>
-              <p className="mt-2 leading-relaxed">{site.legal.ceo}</p>
+              <p className="mt-2 leading-relaxed">
+                {site.legal.ceoTitle} {site.legal.ceo}
+              </p>
             </div>
             <div>
               <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-forest-600">
@@ -65,7 +67,9 @@ export default function ImpressumPage() {
               <h2 className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-forest-600">
                 Inhaltlich Verantwortliche
               </h2>
-              <p className="mt-2 leading-relaxed">{site.legal.ceo}</p>
+              <p className="mt-2 leading-relaxed">
+                {site.legal.ceoTitle} {site.legal.ceo}
+              </p>
             </div>
           </section>
         </div>

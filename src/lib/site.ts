@@ -12,7 +12,7 @@ export const site = {
   tagline: "Added value from forest",
   // Meta description = source text (web-copy PDF, p.2), not invented marketing.
   description:
-    "EFM Development develops new value chains based on renewable biomass from forests.",
+    "EFM Development creates new value chains based on renewable biomass from forests.",
   contact: {
     email: "info@efmdevelopment.com",
     addressLines: ["Burgstrasse 8 D", "3600 Thun", "Switzerland"],
@@ -20,6 +20,10 @@ export const site = {
   },
   legal: {
     ceo: "Elina Kalela",
+    // Prefix title for legal / German-speaking contexts (Impressum).
+    ceoTitle: "Dr.",
+    // Post-nominal academic title shown on the About page.
+    ceoPostNominal: "D.Sc (Tech)",
     registerCourt: "Bern",
     registerNumber: "CHE-272.152.911",
   },
