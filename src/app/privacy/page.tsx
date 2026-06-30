@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Privacy Notice",
   description:
-    "Privacy and data protection statement for EFM Development GmbH (GDPR / Swiss FADP).",
+    "Privacy and data protection statement for EFM Development GmbH (Swiss FADP / GDPR).",
 };
 
 /**
- * Privacy Notice — reproduced from the client's source document, which is
- * INCOMPLETE (only the intro, a register/subcontractor paragraph and section 7
- * were supplied). The missing sections are flagged below for the client to
- * complete.
+ * Privacy Notice — full statement provided by the client (Swiss FADP / GDPR).
+ * Reproduced verbatim; structure only is ours.
  */
 export default function PrivacyPage() {
   return (
@@ -22,55 +21,170 @@ export default function PrivacyPage() {
         </h1>
 
         <p className="mt-6 leading-relaxed text-forest-800/90">
-          Personal Data Act (Articles 10 and 24) and EU General Data Protection
-          Regulation (GDPR) Privacy and Data Protection Statement. The effective
-          date of this privacy policy is May 4, 2026. This policy is kept up to
-          date.
+          Swiss Federal Act on Data Protection (FADP) and, where applicable, the
+          EU General Data Protection Regulation (GDPR) privacy and data
+          protection statement. The effective date of this privacy policy is May
+          4, 2026. This policy is kept up to date.
         </p>
 
-        {/* NOTE: source supplied only the intro, a register paragraph and §7.
-            Sections 1–6 still need to be provided by the client — tracked in
-            the README {{TODO}} list, not shown on the page. */}
-
-        <div className="mt-10 space-y-8 text-forest-800/90">
-          <section>
+        <div className="mt-10 space-y-10 text-forest-800/90">
+          <section className="space-y-3">
             <h2 className="font-display text-lg font-semibold text-forest-900">
               Register
             </h2>
-            <p className="mt-3 leading-relaxed">
-              We utilize our subcontractors in the processing of personal data.
-              We have outsourced IT management to external service providers
-              that manage and store personal data on a protected server. With
-              our subcontractors we have taken care of privacy by drafting
-              processing agreements for the processing of personal data. In some
-              cases, personal data may be disclosed outside the EU/EEA, such as
-              the United States and Russia. The disclosure of the information
-              depends on the service purchased by the customer, which in the
-              contract refers more closely to the type of transfer and to which
-              it is disclosed. We have taken appropriate measures to protect the
-              transfer. We use standard contract clauses approved by the EU or
-              transfer procedures approved by the EU Commission.
+            <p className="leading-relaxed">
+              The controller of the personal data register is EFM Development
+              GmbH. The full company details are available on our{" "}
+              <Link
+                href="/impressum"
+                className="underline underline-offset-4 hover:text-forest-700"
+              >
+                Legal Notice
+              </Link>{" "}
+              page.
             </p>
+            <p className="leading-relaxed">
+              We process personal data in connection with our website,
+              enquiries, customer relationships, communication, service
+              delivery, invoicing, accounting, and ordinary business operations.
+            </p>
+            <p className="leading-relaxed">
+              The personal data we may process includes name, email address,
+              phone number, company name, message content, customer relationship
+              information, contract information, invoicing information, and
+              technical website data such as IP address, browser information,
+              device information, pages visited, and time of visit.
+            </p>
+            <p className="leading-relaxed">
+              The purpose of processing personal data is to respond to
+              enquiries, communicate with customers and partners, provide and
+              manage our services, prepare offers and contracts, handle
+              invoicing and accounting, maintain website functionality and
+              security, and comply with legal obligations.
+            </p>
+            <p className="leading-relaxed">
+              The legal bases for processing personal data are contract, steps
+              taken before entering into a contract, legal obligation, consent
+              where required, and our legitimate interest in operating and
+              developing our business.
+            </p>
+            <p className="leading-relaxed">
+              We utilize subcontractors and service providers in the processing
+              of personal data. These may include providers of IT management,
+              hosting, website services, email, accounting, invoicing, customer
+              communication, and other business systems. We have taken care of
+              privacy with our subcontractors by using appropriate data
+              processing agreements.
+            </p>
+            <p className="leading-relaxed">
+              In some cases, personal data may be processed or disclosed outside
+              Switzerland, the EU, or the EEA, such as the United States and
+              Russia, depending on the service purchased by the customer or the
+              service providers required for delivering the service. Where
+              personal data is transferred internationally, we use appropriate
+              safeguards required by applicable data protection law, such as
+              adequacy decisions, standard contractual clauses, data processing
+              agreements, or another lawful transfer mechanism. Transfers are
+              made only where there is a valid legal basis and appropriate
+              protection for the data.
+            </p>
+            <p className="leading-relaxed">We do not sell personal data.</p>
           </section>
 
-          <section>
+          <section className="space-y-3">
             <h2 className="font-display text-lg font-semibold text-forest-900">
               How we protect the data and how long do we keep it?
             </h2>
-            <p className="mt-3 leading-relaxed">
-              Only employees who have the right to process personal data for
-              their work are entitled to use the personal data system. Each user
-              has their own username and password for the system. Data is
-              collected in databases that are protected by passwords and other
-              technical means. Databases and their backups are located in locked
-              spaces and access to data is restricted to certain pre-designated
-              persons.
+            <p className="leading-relaxed">
+              Only persons who have the right to process personal data for their
+              work are entitled to use the systems containing personal data.
+              Each user has their own access credentials, and access rights are
+              limited according to work duties.
             </p>
-            <p className="mt-3 leading-relaxed">
-              We keep personal information for 12 months from the date of
-              termination of the customer relationship / employment relationship
-              and, in accordance with accounting legislation, billing data for 6
-              years after the invoice date.
+            <p className="leading-relaxed">
+              Personal data is stored in protected systems and databases. We
+              protect the data with appropriate technical and organisational
+              measures, including access control, passwords, secure systems,
+              backups, restricted access rights, and protection against
+              unauthorised access, loss, alteration, or disclosure.
+            </p>
+            <p className="leading-relaxed">
+              We keep personal data only for as long as necessary for the
+              purpose for which it was collected, unless a longer retention
+              period is required by law.
+            </p>
+            <p className="leading-relaxed">
+              Customer relationship data is kept for the duration of the
+              customer relationship and generally for 12 months after the end of
+              the customer relationship, unless longer retention is necessary
+              for legal, contractual, accounting, or legitimate business
+              reasons.
+            </p>
+            <p className="leading-relaxed">
+              Billing and accounting data is kept in accordance with applicable
+              accounting legislation, generally for 6 years after the invoice
+              date or for the period required by applicable law.
+            </p>
+            <p className="leading-relaxed">
+              Website technical data and logs are kept only for the period
+              necessary for website security, maintenance, troubleshooting, and
+              analytics.
+            </p>
+            <p className="leading-relaxed">
+              When personal data is no longer needed, it is deleted or
+              anonymised.
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="font-display text-lg font-semibold text-forest-900">
+              Rights of the data subject
+            </h2>
+            <p className="leading-relaxed">
+              The data subject has the right to access their personal data,
+              request correction of inaccurate data, request deletion of data,
+              request restriction of processing, object to processing, withdraw
+              consent where processing is based on consent, and lodge a
+              complaint with a supervisory authority.
+            </p>
+            <p className="leading-relaxed">
+              In Switzerland, the competent supervisory authority is the Federal
+              Data Protection and Information Commissioner (FDPIC).
+            </p>
+            <p className="leading-relaxed">
+              Requests concerning personal data can be sent to:{" "}
+              <a
+                href="mailto:info@efmdevelopment.com"
+                className="underline underline-offset-4 hover:text-forest-700"
+              >
+                info@efmdevelopment.com
+              </a>
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="font-display text-lg font-semibold text-forest-900">
+              Cookies
+            </h2>
+            <p className="leading-relaxed">
+              Our website may use cookies or similar technologies to ensure the
+              website functions properly, improve user experience, maintain
+              security, and understand website usage.
+            </p>
+            <p className="leading-relaxed">
+              The user can control cookies through browser settings. If
+              non-essential analytics or marketing cookies are used, they are
+              used only where legally permitted.
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="font-display text-lg font-semibold text-forest-900">
+              Changes to this privacy policy
+            </h2>
+            <p className="leading-relaxed">
+              We may update this privacy policy when necessary. The latest
+              version is available on this website.
             </p>
           </section>
         </div>
