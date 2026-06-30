@@ -23,8 +23,8 @@ export default function PrivacyPage() {
         <p className="mt-6 leading-relaxed text-forest-800/90">
           Swiss Federal Act on Data Protection (FADP) and, where applicable, the
           EU General Data Protection Regulation (GDPR) privacy and data
-          protection statement. The effective date of this privacy policy is May
-          4, 2026. This policy is kept up to date.
+          protection statement. The effective date of this privacy policy is
+          June 30, 2026. This policy is kept up to date.
         </p>
 
         <div className="mt-10 space-y-10 text-forest-800/90">
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
                 href="/impressum"
                 className="underline underline-offset-4 hover:text-forest-700"
               >
-                Legal Notice
+                Impressum
               </Link>{" "}
               page.
             </p>
@@ -78,15 +78,14 @@ export default function PrivacyPage() {
             </p>
             <p className="leading-relaxed">
               In some cases, personal data may be processed or disclosed outside
-              Switzerland, the EU, or the EEA, such as the United States and
-              Russia, depending on the service purchased by the customer or the
-              service providers required for delivering the service. Where
-              personal data is transferred internationally, we use appropriate
-              safeguards required by applicable data protection law, such as
-              adequacy decisions, standard contractual clauses, data processing
-              agreements, or another lawful transfer mechanism. Transfers are
-              made only where there is a valid legal basis and appropriate
-              protection for the data.
+              Switzerland, the EU, or the EEA, depending on the service purchased
+              by the customer or the service providers required for delivering
+              the service. Where personal data is transferred internationally,
+              we use appropriate safeguards required by applicable data
+              protection law, such as adequacy decisions, standard contractual
+              clauses, data processing agreements, or another lawful transfer
+              mechanism. Transfers are made only where there is a valid legal
+              basis and appropriate protection for the data.
             </p>
             <p className="leading-relaxed">We do not sell personal data.</p>
           </section>
@@ -127,8 +126,7 @@ export default function PrivacyPage() {
             </p>
             <p className="leading-relaxed">
               Website technical data and logs are kept only for the period
-              necessary for website security, maintenance, troubleshooting, and
-              analytics.
+              necessary for website security, maintenance, and troubleshooting.
             </p>
             <p className="leading-relaxed">
               When personal data is no longer needed, it is deleted or
