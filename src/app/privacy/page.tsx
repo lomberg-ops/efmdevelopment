@@ -88,6 +88,11 @@ export default function PrivacyPage() {
               basis and appropriate protection for the data.
             </p>
             <p className="leading-relaxed">We do not sell personal data.</p>
+            <p className="leading-relaxed">
+              We do not use automated decision-making, including profiling, that
+              produces legal or similarly significant effects concerning
+              individuals.
+            </p>
           </section>
 
           <section className="space-y-3">
@@ -121,8 +126,9 @@ export default function PrivacyPage() {
             </p>
             <p className="leading-relaxed">
               Billing and accounting data is kept in accordance with applicable
-              accounting legislation, generally for 6 years after the invoice
-              date or for the period required by applicable law.
+              accounting legislation. Under Swiss law, accounting books and
+              records are generally retained for 10 years from the end of the
+              financial year, or for the period required by applicable law.
             </p>
             <p className="leading-relaxed">
               Website technical data and logs are kept only for the period
@@ -141,9 +147,10 @@ export default function PrivacyPage() {
             <p className="leading-relaxed">
               The data subject has the right to access their personal data,
               request correction of inaccurate data, request deletion of data,
-              request restriction of processing, object to processing, withdraw
-              consent where processing is based on consent, and lodge a
-              complaint with a supervisory authority.
+              request restriction of processing, object to processing, request
+              data portability where applicable, withdraw consent where
+              processing is based on consent, and lodge a complaint with a
+              supervisory authority.
             </p>
             <p className="leading-relaxed">
               In Switzerland, the competent supervisory authority is the Federal
