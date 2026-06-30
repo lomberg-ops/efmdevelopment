@@ -30,6 +30,7 @@ export type NavLink = { href: string; label: string };
 export const mainNav: NavLink[] = [
   { href: "/technology", label: "Technology" },
   { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -39,6 +40,7 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
     links: [
       { href: "/about", label: "About" },
       { href: "/technology", label: "Forest biosensors" },
+      { href: "/blog", label: "Blog" },
       { href: "/contact", label: "Contact" },
     ],
   },
